@@ -15,6 +15,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
 
     val genero = MutableLiveData("")
     val instrumentos = MutableLiveData("")
+    val name = MutableLiveData("")
     val status = MutableLiveData("")
 
     fun getMusics()=musicRepository.getMusics()
@@ -35,6 +36,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
 
     fun validateData():Boolean{
         when{
+            name.value.isNullOrEmpty()->return false
             genero.value.isNullOrEmpty()->return false
             instrumentos.value.isNullOrEmpty()->return false
         }
@@ -49,6 +51,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
         }
 
         val music = Music(
+            name.value!!,
             genero.value!!,
             instrumentos.value!!
         )
@@ -59,6 +62,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
     }
 
     private fun clearData() {
+        name.value = ""
         genero.value =""
         instrumentos.value = ""
     }
@@ -68,6 +72,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
     }
 
     fun selectMusic(music: Music){
+        name.value = music.name
         genero.value = music.genero
         instrumentos.value = music.instrumentos
     }
