@@ -61,7 +61,7 @@ class MusicsViewModels(private val musicRepository: MusicRepository):ViewModel()
         status.value = MUSIC_CREATED
     }
 
-    private fun clearData() {
+     fun clearData() {
         name.value = ""
         genero.value =""
         instrumentos.value = ""

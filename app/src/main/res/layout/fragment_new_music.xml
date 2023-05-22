@@ -26,6 +26,14 @@
             android:textSize="40sp"/>
 
         <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@={viewmodel.name}" />
+
+        <EditText
             android:id="@+id/editTextText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,7 +54,8 @@
             android:id="@+id/saveMusicButtom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="save" />
+            android:text="save"
+            android:onClick="@{()->viewmodel.createMusic()}"/>
 
     </LinearLayout>
 </layout>
