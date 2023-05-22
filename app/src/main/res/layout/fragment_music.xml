@@ -21,9 +21,9 @@
             android:layout_height="wrap_content"
             tools:text="name"
             android:text="@{viewmodel.name}"
-            android:padding="16dp"
+            android:padding="@dimen/mediumPadding"
             android:gravity="center"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/tittleSize"/>
 
         <TextView
             android:layout_width="wrap_content"

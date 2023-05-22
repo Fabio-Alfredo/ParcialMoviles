@@ -13,17 +13,26 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.NewMusicFragment">
+        tools:context=".ui.NewMusicFragment"
+        android:padding="@dimen/mediumPadding">
 
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MUSICS"
-            android:padding="16dp"
+            android:text="@string/new_musics"
+            android:padding="@dimen/mediumPadding"
             android:gravity="center"
-            android:textSize="40sp"/>
+            android:textSize="@dimen/tittleSize"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sizeTextMedium"
+            android:text="@string/name"
+            android:textSize="@dimen/sizeTextMedium" />
 
         <EditText
             android:id="@+id/editTextText3"
@@ -33,6 +42,14 @@
             android:inputType="text"
             android:text="@={viewmodel.name}" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sizeTextMedium"
+            android:text="@string/gender"
+            android:textSize="@dimen/sizeTextMedium" />
+
         <EditText
             android:id="@+id/editTextText"
             android:layout_width="match_parent"
@@ -40,6 +57,14 @@
             android:ems="10"
             android:inputType="text"
             android:text="@={viewmodel.genero}" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/sizeTextMedium"
+            android:text="@string/instruments"
+            android:textSize="@dimen/sizeTextMedium" />
 
         <EditText
             android:id="@+id/editTextText2"
@@ -54,7 +79,7 @@
             android:id="@+id/saveMusicButtom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="save"
+            android:text="@string/save"
             android:onClick="@{()->viewmodel.createMusic()}"/>
 
     </LinearLayout>

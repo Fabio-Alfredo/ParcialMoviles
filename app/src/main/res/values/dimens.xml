@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mediumPadding">16dp</dimen>
+    <dimen name="tittleSize">40sp</dimen>
+    <dimen name="sizeTextMedium">20sp</dimen>
+</resources>
