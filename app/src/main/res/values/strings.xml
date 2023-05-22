@@ -9,4 +9,5 @@
     <string name="name">Name:</string>
     <string name="gender">Gender:</string>
     <string name="instruments">Instruments</string>
+    <string name="nameItem">name</string>
 </resources>
